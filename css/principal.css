@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@100;300;400;700;800;900&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.navegacao-principal {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  min-height: 92px;
+  padding: 0 clamp(24px, 6vw, 96px);
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.48) 80%, transparent);
+}
+
+.Nome_empresa {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.links-principais {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 40px);
+}
+
+.controle-menu,
+.botao-menu {
+  display: none;
+}
+
+.navegacao-principal a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+  transition: color 0.3s;
+}
+
+.navegacao-principal a:hover,
+.navegacao-principal .pagina_atual {
+  color: #ffc107;
+}
+
+.botao-whatsapp {
+  position: fixed;
+  right: 25px;
+  bottom: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.icone-whatsapp {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+  transform: rotate(-18deg);
+}
+
+.texto-acessivel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.botao-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+.imagem-principal {
+  position: relative;
+  width: 100%;
+}
+
+.imagem-principal img {
+  display: block;
+  width: 100%;
+  height: min(85vh, 900px);
+  object-fit: cover;
+  object-position: center 65%;
+}
+
+.chamada-principal {
+  position: absolute;
+  left: clamp(24px, 6vw, 96px);
+  right: clamp(24px, 6vw, 96px);
+  bottom: clamp(80px, 50vh, 250px);
+  z-index: 2;
+  max-width: 850px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
+}
+
+.chamada-principal p {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  
+  font-size: clamp(18px, 1.8vw, 16px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.chamada-principal h4 {
+  font-family:serif;
+  margin: 15px 0 0;
+  font-size: clamp(22px, 2.6vw, 160px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.informacoes_finais {
+  width: 100%;
+  background-color: #ffffff;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 35px 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.informacoes_finais h2 {
+  font-family: 'Inter', sans-serif;
+  color: #10445a;
+  font-size: 22px;
+  margin: 0 0 18px;
+}
+
+.informacoes_finais ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.informacoes_finais li {
+  margin-bottom: 10px;
+}
+
+.informacoes_finais a,
+.redes_sociais a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.informacoes_finais a:hover,
+.redes_sociais a:hover {
+  color: #ffc107;
+}
+
+.informacoes_finais p {
+  color: #333333;
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.navegacao,
+.contato {
+  width: 170px;
+}
+
+.redes_sociais {
+  display: flex;
+  flex-direction: column;
+}
+
+.icone-instagram {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.icone-instagram::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+}
+
+.icone-instagram::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.redes_sociais a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .navegacao-principal {
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    min-height: 72px;
+    padding: 20px;
+  }
+
+  .controle-menu {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .botao-menu {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .botao-menu span {
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: #ffffff;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+
+  .links-principais {
+    position: absolute;
+    top: 76px;
+    left: 20px;
+    right: 20px;
+    display: none;
+    width: auto;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow: hidden;
+    background: rgba(10, 10, 10, 0.94);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+  }
+
+  .controle-menu:checked ~ .links-principais {
+    display: flex;
+  }
+
+  .controle-menu:checked + .botao-menu span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .controle-menu:checked + .botao-menu span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .controle-menu:checked + .botao-menu span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navegacao-principal a {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .imagem-principal img {
+    height: 60vh;
+    min-height: 320px;
+  }
+
+  .chamada-principal {
+    left: 20px;
+    right: 20px;
+    bottom: 28px;
+    max-width: none;
+  }
+
+  .informacoes_finais {
+    gap: 40px;
+  }
+}
