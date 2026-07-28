@@ -313,8 +313,10 @@ html, body {
   }
 
   .imagem-principal img {
-    height: 60vh;
-    min-height: 320px;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
+    object-fit: cover;
   }
 
   .chamada-principal {
