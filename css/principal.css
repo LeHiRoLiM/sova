@@ -74,10 +74,10 @@ html, body {
 }
 
 .icone-whatsapp {
-  color: #ffffff;
-  font-size: 28px;
-  line-height: 1;
-  transform: rotate(-18deg);
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .texto-acessivel {
@@ -113,7 +113,7 @@ html, body {
   position: absolute;
   left: clamp(24px, 6vw, 96px);
   right: clamp(24px, 6vw, 96px);
-  bottom: clamp(80px, 50vh, 250px);
+  bottom: clamp(80px, 50vh, 180px);
   z-index: 2;
   max-width: 850px;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
