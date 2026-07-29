@@ -23,7 +23,7 @@ html, body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.48) 80%, transparent);
 }
 
-.Nome_empresa {
+.nome-empresa {
   margin: 0;
   font-size: 21px;
   font-weight: 700;
@@ -53,7 +53,7 @@ html, body {
 }
 
 .navegacao-principal a:hover,
-.navegacao-principal .pagina_atual {
+.navegacao-principal .pagina-atual {
   color: #ffc107;
 }
 
@@ -123,17 +123,17 @@ html, body {
 .chamada-principal p {
   font-family: 'Poppins', sans-serif;
   margin: 10px 0 0;
-  font-size: clamp(18px, 1.8vw, 16px);
-  font-weight: 50;
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: 400;
   line-height: 1.4;
 }
 
 .chamada-principal h4 {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 10px 0 0;
   font-size: clamp(30px, 4vw, 64px);
   font-weight: 700;
-  line-height: 1.0;
+  line-height: 1;
 }
 
 .linha {
@@ -145,16 +145,24 @@ html, body {
   opacity: 0.3;
 }
 
-.btn {
+.botoes {
   display: flex;
   justify-content: flex-end;
-  width: calc(100vw - 38vw);
+  align-items: center;
+  gap: 12px;
+  width: 80vw;
   margin-top: 20px;
 }
 
-.btn-saiba-mais {
+.botao-item {
+  display: flex;
+  width: 230px;
+}
+
+.botao-chamada {
   display: inline-block;
-  padding: 12px 28px;
+  width: 100%;
+  padding: 15px 30px;
   border: 1px solid #ffffff;
   border-radius: 0;
   background-color: #ffffff;
@@ -166,12 +174,22 @@ html, body {
   transition: background-color 0.25s, color 0.25s;
 }
 
-.btn-saiba-mais:hover {
+.botao-chamada:hover {
   background-color: transparent;
   color: #ffffff;
 }
 
-.informacoes_finais {
+.botao-chamada-secundario {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.botao-chamada-secundario:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.informacoes-finais {
   width: 100%;
   background-color: #ffffff;
   color: #333333;
@@ -183,25 +201,25 @@ html, body {
   flex-wrap: wrap;
 }
 
-.informacoes_finais h2 {
+.informacoes-finais h2 {
   font-family: 'Inter', sans-serif;
   color: #000000;
   font-size: 22px;
   margin: 0 0 18px;
 }
 
-.informacoes_finais ul {
+.informacoes-finais ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.informacoes_finais li {
+.informacoes-finais li {
   margin-bottom: 10px;
 }
 
-.informacoes_finais a,
-.redes_sociais a {
+.informacoes-finais a,
+.redes-sociais a {
   color: #333333;
   text-decoration: none;
   font-weight: 500;
@@ -209,12 +227,12 @@ html, body {
   transition: color 0.3s;
 }
 
-.informacoes_finais a:hover,
-.redes_sociais a:hover {
+.informacoes-finais a:hover,
+.redes-sociais a:hover {
   color: #ffc107;
 }
 
-.informacoes_finais p {
+.informacoes-finais p {
   color: #333333;
   margin: 0 0 10px;
   font-size: 15px;
@@ -225,7 +243,7 @@ html, body {
   width: 170px;
 }
 
-.redes_sociais {
+.redes-sociais {
   display: flex;
   flex-direction: column;
 }
@@ -259,7 +277,7 @@ html, body {
   background: currentColor;
 }
 
-.redes_sociais a {
+.redes-sociais a {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -357,7 +375,7 @@ html, body {
   .chamada-principal {
     left: 15px;
     right: 20px;
-    bottom: 110px;
+    bottom: 45px;
     max-width: none;
     transition: transform 0.3s ease;
   }
@@ -371,12 +389,19 @@ html, body {
     margin: 20px 0;
   }
 
-  .btn {
+  .botoes {
     width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
   }
 
-  .informacoes_finais {
+  .botao-chamada {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .informacoes-finais {
     gap: 40px;
   }
 }
