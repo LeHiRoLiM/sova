@@ -359,6 +359,11 @@ html, body {
     right: 20px;
     bottom: 110px;
     max-width: none;
+    transition: transform 0.3s ease;
+  }
+
+  .imagem-principal:has(.controle-menu:checked) .chamada-principal {
+    transform: translateY(70px);
   }
 
   .linha {
