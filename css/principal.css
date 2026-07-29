@@ -114,7 +114,7 @@ html, body {
   position: absolute;
   left: clamp(24px, 6vw, 96px);
   right: clamp(24px, 6vw, 96px);
-  bottom: 150px;
+  bottom: 100px;
   z-index: 2;
   max-width: 850px;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
@@ -148,7 +148,7 @@ html, body {
 .btn {
   display: flex;
   justify-content: flex-end;
-  width: calc(100vw - 30vw);
+  width: calc(100vw - 38vw);
   margin-top: 20px;
 }
 
