@@ -291,6 +291,7 @@ html, body {
     gap: 20px;
     min-height: 72px;
     padding: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.48) 30%, transparent);
   }
 
   .controle-menu {
