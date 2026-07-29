@@ -9,14 +9,18 @@
 </head>
 
 <body>
+  <!-- BTN WHATSAPP -->
   <a class="botao-whatsapp" href="https://wa.me/+5588921521281" target="_blank" rel="noopener noreferrer">
     <img class="icone-whatsapp" src="img/whatsapp.png" alt="" aria-hidden="true">
     <span class="texto-acessivel">WhatsApp</span>
   </a>
 
   <main class="imagem-principal">
+
+    <!-- Imagem principal de fundo -->
     <img src="img/img_principal.jpg" alt="Imagem principal da Sova Produtora">
 
+    <!-- Configuração do MENU e HEADER -->
     <nav class="navegacao-principal" aria-label="Navegação principal">
       <p class="nome-empresa">SOVA PRODUTORA</p>
       <input class="controle-menu" type="checkbox" id="controle-menu" aria-label="Abrir ou fechar menu">
@@ -26,7 +30,7 @@
         <span></span>
       </label>
 
-      <!-- menu -->
+      <!-- MENU -->
       <div class="links-principais">
         <a class="pagina-atual" href="principal.html" aria-current="page">Home</a>
         <a href="servicos.html">Serviços</a>
@@ -47,27 +51,43 @@
         <p>Solucionamos os seus problemas e tiramos sua dor de cabeça!</p>
       </div>
 
+      <!-- BTN "VER OS TRABALHOS" -->
       <div class="botoes">
         <div class="botao-item">
-          <button class="botao-chamada" type="button" onclick="window.location.href='sobreNos.html'">Ver nossos trabalhos</button>
+          <button class="botao-chamada" type="button" onclick="document.getElementById('trabalhos').scrollIntoView({ behavior: 'smooth' })">Ver nossos trabalhos</button>
         </div>
 
+        <!-- BTN "QUEM SOMOS" -->
         <div class="botao-item">
-          <button class="botao-chamada botao-chamada-secundario" type="button" onclick="window.location.href='contato.html'">Quem somos</button>
+          <button class="botao-chamada botao-chamada-secundario" type="button"
+            onclick="window.location.href='contato.html'">Quem somos</button>
         </div>
       </div>
+
     </div>
   </main>
 
+  <div class="trabalhos" id="trabalhos">
+
+    <div class="trabalhos-frase1">
+      <p>Seleção de trabalhos</p>
+      <h2>Sempre entregando RESULTADO!</h2>
+
+    </div>
+
+    <div class="trabalhos-frase2">
+      <p>Um recorte de projetos dirigidos com intenção, ritmo e atenção ao que não precisa ser dito.</p>
+    </div>
+    <hr class="linha-trabalhos">
+  </div>
+
+
+  <!-- FINAL -->
+
   <footer class="informacoes-finais">
     <div class="navegacao">
-      <h2>Navegação</h2>
-      <ul>
-        <li><a href="principal.html">Home</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="resultados.html">Resultados</a></li>
-        <li><a href="sobreNos.html">Sobre Nós</a></li>
-      </ul>
+      <h2>SOVA PRODUTORA</h2>
+
     </div>
 
     <div class="contato">
