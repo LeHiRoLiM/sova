@@ -114,7 +114,7 @@ html, body {
   position: absolute;
   left: clamp(24px, 6vw, 96px);
   right: clamp(24px, 6vw, 96px);
-  bottom: 100px;
+  bottom: 80px;
   z-index: 2;
   max-width: 850px;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
@@ -399,7 +399,7 @@ html, body {
   }
 
   .botao-item {
-    width: min(100%, 280px);
+    width: min(100%, 245px);
   }
 
   .botao-chamada {
