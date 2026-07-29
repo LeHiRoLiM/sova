@@ -20,7 +20,7 @@ html, body {
   min-height: 92px;
   padding: 0 clamp(24px, 6vw, 96px);
   box-sizing: border-box;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.48) 80%, transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.48) 30%, transparent);
 }
 
 .nome-empresa {
