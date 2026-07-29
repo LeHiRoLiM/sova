@@ -93,7 +93,7 @@ html, body {
 }
 
 .botao-whatsapp:hover {
-  background-color: #1ebe5d;
+  background-color: #000000;
 }
 
 .imagem-principal {
@@ -104,7 +104,8 @@ html, body {
 .imagem-principal img {
   display: block;
   width: 100%;
-  height: min(85vh, 900px);
+  height: 100vh;
+  height: 100svh;
   object-fit: cover;
   object-position: center 65%;
 }
@@ -113,7 +114,7 @@ html, body {
   position: absolute;
   left: clamp(24px, 6vw, 96px);
   right: clamp(24px, 6vw, 96px);
-  bottom: 50px;
+  bottom: 150px;
   z-index: 2;
   max-width: 850px;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
@@ -131,8 +132,8 @@ html, body {
   font-family:Arial, Helvetica, sans-serif;
   margin: 10px 0 0;
   font-size: clamp(30px, 4vw, 64px);
-  font-weight: 800;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.0;
 }
 
 .linha {
@@ -142,6 +143,32 @@ html, body {
   border: none;
   background-color: #ffffff;
   opacity: 0.3;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100vw - 30vw);
+  margin-top: 20px;
+}
+
+.btn-saiba-mais {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.btn-saiba-mais:hover {
+  background-color: transparent;
+  color: #ffffff;
 }
 
 .informacoes_finais {
@@ -337,6 +364,11 @@ html, body {
   .linha {
     width: 99%;
     margin: 20px 0;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .informacoes_finais {
