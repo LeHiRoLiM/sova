@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sova Produtora</title>
-  <link rel="stylesheet" href="css/principal.css?v=6">
+  <link rel="stylesheet" href="css/principal.css?v=13">
 </head>
 
 <body>
@@ -33,9 +33,8 @@
       <!-- MENU -->
       <div class="links-principais">
         <a class="pagina-atual" href="principal.html" aria-current="page">Home</a>
-        <a href="servicos.html">Trabalhos</a>
-        <a href="resultados.html">Resultados</a>
-        <a href="sobreNos.html">Sobre Nós</a>
+        <a href="#trabalhos">Serviços</a>
+        <a href="#sobre-nos">Sobre nós</a>
         <a href="contato.html">Contato</a>
       </div>
     </nav>
@@ -66,7 +65,7 @@
         <!-- BTN "QUEM SOMOS" -->
         <div class="botao-item">
           <button class="botao-chamada botao-chamada-secundario" type="button"
-            onclick="window.location.href='contato.html'">Quem somos</button>
+            onclick="document.getElementById('sobre-nos').scrollIntoView({ behavior: 'smooth' })">Quem somos</button>
         </div>
       </div>
 
@@ -86,6 +85,66 @@
     </div>
     <hr class="linha-trabalhos">
   </div>
+
+  <div class="trabalhos-imagens">
+    <div class="trabalho-item">
+      <img src="img/trabalho1.jpg" alt="Imagem do trabalho 1">
+      <p class="trabalho-legenda">Academia</p>
+    </div>
+    <div class="trabalho-item">
+      <img src="img/trabalho2.jpg" alt="Imagem do trabalho 2">
+      <p class="trabalho-legenda">Fisioterapia</p>
+    </div>
+    <div class="trabalho-item">
+      <img src="img/trabalho3.jpg" alt="Imagem do trabalho 3">
+      <p class="trabalho-legenda">Clinicas/Dentistas</p>
+    </div>
+    <div class="trabalho-item trabalho-item-4">
+      <img src="img/trabalho4.jpg" alt="Imagem do trabalho 4">
+      <p class="trabalho-legenda">Pilates Day</p>
+    </div>
+    <div class="trabalho-item trabalho-item-5">
+      <img src="img/trabalho5.jpg" alt="Imagem do trabalho 5">
+      <p class="trabalho-legenda">Fortaleza</p>
+    </div>
+    <div class="trabalho-item trabalho-item-6">
+      <img src="img/trabalho6.jpg" alt="Imagem do trabalho 6">
+      <p class="trabalho-legenda">Fotografia Esportiva</p>
+    </div>
+  </div>
+
+  <section class="sobre-nos" id="sobre-nos">
+    <div class="sobre-nos-introducao">
+      <div class="sobre-nos-titulo animar-sobre-nos">
+        <p class="sobre-nos-etiqueta">O QUE FAZEMOS?</p>
+        <h2>Solucionamos seus problemas</h2>
+      </div>
+      <p class="sobre-nos-resumo animar-sobre-nos">Projetos completos ou frentes específicas, sempre com olhar autoral e execução precisa.</p>
+    </div>
+
+    <div class="servicos-grade">
+      <article class="servico-item animar-sobre-nos">
+        <span>01</span>
+        <h3>Criação de Reels</h3>
+        <p>Criamos o seu conteúdo de um mês todo em 3hrs de captação.</p>
+      </article>
+      <article class="servico-item animar-sobre-nos">
+        <span>02</span>
+        <h3>Ensaios</h3>
+        <p>Fotos para suas redes e sua empresa elevar a autoridade.</p>
+      </article>
+      <article class="servico-item animar-sobre-nos">
+        <span>03</span>
+        <h3>Cobertura de eventos</h3>
+        <p>Nossa equipe cobre seu evento e elevamos o nível da sua empresa.</p>
+      </article>
+      <article class="servico-item animar-sobre-nos">
+        <span>04</span>
+        <h3>Captação com Drone</h3>
+        <p>A imagem aérea deixa seu conteúdo ou evento em outro nível.</p>
+      </article>
+    </div>
+  </section>
 
 
   <!-- FINAL -->
@@ -113,6 +172,7 @@
     </div>
   </footer>
 
+  <script src="js/logica.js?v=4"></script>
 </body>
 
 </html>

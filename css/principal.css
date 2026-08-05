@@ -67,7 +67,7 @@ html {
   bottom: 60px;
   width: 60px;
   height: 60px;
-  background-color: #181616;
+  background-color: #161817;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -235,10 +235,186 @@ html {
 .linha-trabalhos {
   width: calc(100% - 160px);
   height: 1px;
-  margin: 0 80px 600px;
+  margin: 0 80px 40px;
   border: 0;
   background-color: #ffffff;
   opacity: 0.3;
+}
+
+.trabalhos-imagens {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: calc(100% - 160px);
+  margin: 0 80px 80px;
+}
+
+.trabalho-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.trabalho-item::after {
+  content: "";
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent);
+  pointer-events: none;
+}
+
+.trabalho-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease, filter 0.55s ease;
+}
+
+.trabalho-item:hover img {
+  transform: scale(1.07);
+  filter: brightness(0.78);
+}
+
+.trabalho-legenda {
+  position: absolute;
+  left: clamp(16px, 2vw, 28px);
+  bottom: clamp(14px, 2vw, 24px);
+  z-index: 1;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(16px, 1.5vw, 22px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.animacoes-ativas .trabalho-item {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.animacoes-ativas .trabalho-item:nth-child(2),
+.animacoes-ativas .trabalho-item:nth-child(5) {
+  transition-delay: 0.12s;
+}
+
+.animacoes-ativas .trabalho-item:nth-child(3),
+.animacoes-ativas .trabalho-item:nth-child(6) {
+  transition-delay: 0.24s;
+}
+
+.animacoes-ativas .trabalho-item.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sobre-nos {
+  scroll-margin-top: 25px;
+  padding: 85px 5vw 100px;
+  border-top: 1px solid #292929;
+  box-sizing: border-box;
+  background-color: #101010;
+}
+
+.sobre-nos-introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 8vw, 130px);
+  align-items: end;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #343434;
+}
+
+.sobre-nos-etiqueta {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 1px 4px;
+
+  box-sizing: border-box;
+  color: #bdbdbd;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.sobre-nos-titulo h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(22px, 2.3vw, 34px);
+  line-height: 1.15;
+}
+
+.sobre-nos-resumo {
+  max-width: 420px;
+  margin: 0 0 2px;
+  color: #d4d4d4;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.servicos-grade {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.servico-item {
+  min-height: 200px;
+  padding: 34px 0 30px;
+  border-bottom: 1px solid #343434;
+  box-sizing: border-box;
+}
+
+.servico-item:nth-child(odd) {
+  padding-right: 6vw;
+}
+
+.servico-item:nth-child(even) {
+  padding-left: 3vw;
+}
+
+.servico-item span {
+  color: #aeb9c8;
+  font-size: 13px;
+}
+
+.servico-item h3 {
+  margin: 20px 0 9px;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.servico-item p {
+  max-width: 450px;
+  margin: 0;
+  color: #c7c7c7;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.animacoes-ativas .animar-sobre-nos {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--atraso-animacao, 0s);
+}
+
+.animacoes-ativas .animar-sobre-nos.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trabalho-item,
+  .trabalho-item img,
+  .animar-sobre-nos {
+    transition: none !important;
+  }
 }
 
 
@@ -339,6 +515,10 @@ html {
 }
 
 @media (max-width: 768px) {
+  .trabalhos {
+    scroll-margin-top: 25px;
+  }
+
   .trabalhos-frase1,
   .trabalhos-frase2 {
     padding-left: 30px;
@@ -357,10 +537,49 @@ html {
     display: block;
     width: calc(100% - 50px);
     height: 1px;
-    margin: 0 20px 600px 30px;
+    margin: 0 20px 30px 30px;
     border: 0;
     background-color: #ffffff;
     opacity: 0.3;
+  }
+
+  .trabalhos-imagens {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: calc(100% - 50px);
+    margin: 0 20px 50px 30px;
+  }
+
+  .trabalho-item-6 {
+    display: none;
+  }
+
+  .sobre-nos {
+    padding: 60px 24px 70px;
+  }
+
+  .sobre-nos-introducao {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-bottom: 35px;
+  }
+
+  .servicos-grade {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .sobre-nos-resumo {
+    max-width: 100%;
+  }
+
+  .servico-item,
+  .servico-item:nth-child(odd),
+  .servico-item:nth-child(even) {
+    width: 100%;
+    min-height: 0;
+    padding: 30px 0;
   }
 
   .navegacao-principal {
