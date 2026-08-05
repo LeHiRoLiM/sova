@@ -422,97 +422,57 @@ html {
 
 .informacoes-finais {
   scroll-margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 60px;
   width: 100%;
-  background-color: #ffffff;
-  color: #333333;
-  display: flex;
-  justify-content: center;
-  gap: 120px;
-  padding: 35px 20px;
+  min-height: 245px;
+  margin: 0;
+  padding: 78px 40px 58px;
+  border-top: 1px solid #d8d8d8;
   box-sizing: border-box;
-  flex-wrap: wrap;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.informacoes-finais h2 {
+.rodape-marca h2 {
+  margin: 0 0 3px;
   font-family: 'Inter', sans-serif;
   color: #000000;
   font-size: 22px;
-  margin: 0 0 18px;
+  line-height: 1.3;
 }
 
-.informacoes-finais ul {
-  list-style: none;
+.rodape-marca p,
+.rodape-contato p {
   margin: 0;
-  padding: 0;
-}
-
-.informacoes-finais li {
-  margin-bottom: 10px;
-}
-
-.informacoes-finais a,
-.redes-sociais a {
-  color: #333333;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 15px;
-  transition: color 0.3s;
-}
-
-.informacoes-finais a:hover,
-.redes-sociais a:hover {
-  color: #ffc107;
-}
-
-.informacoes-finais p {
-  color: #333333;
-  margin: 0 0 10px;
+  color: #4f5963;
   font-size: 15px;
 }
 
-.navegacao,
-.contato {
-  width: 170px;
-}
-
-.redes-sociais {
+.rodape-contato {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
 }
 
-.icone-instagram {
-  position: relative;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid currentColor;
-  border-radius: 5px;
-  box-sizing: border-box;
+.rodape-contato a {
+  color: #20252a;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.55;
+  transition: color 0.25s ease;
 }
 
-.icone-instagram::before {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
+.rodape-contato a:hover {
+  color: #6d28d9;
 }
 
-.icone-instagram::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-.redes-sociais a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.rodape-contato p {
+  margin-top: 18px;
+  font-size: 13px;
 }
 
 @media (max-width: 768px) {
@@ -717,6 +677,21 @@ html {
   }
 
   .informacoes-finais {
-    gap: 40px;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 35px;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 55px 24px 45px;
+  }
+
+  .rodape-contato {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .rodape-contato a {
+    font-size: 16px;
   }
 }
